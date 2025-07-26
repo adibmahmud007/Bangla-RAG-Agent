@@ -196,10 +196,16 @@ GET /api/status
 }
 ```
 
-#### 3. Interactive Documentation
+## 3. Interactive Documentation
 - **Swagger UI**: Available at `http://localhost:8000/docs#/` with interactive testing
-- **ReDoc**: Available at `/redoc` with detailed documentation
-- **OpenAPI Schema**: Available at `/openapi.json`
+### SwaggerUI Samples
+####Swagger Home
+![](./Sample_screenshots/swagger_home.png)
+#### Question
+![](./Sample_screenshots/question.png)
+#### Answer
+![](./Sample_screenshots/Answer.png)
+
 
 ## 🛠️ Technical Implementation
 ## 🛠️ Technology Stack
