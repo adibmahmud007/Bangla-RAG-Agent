@@ -120,15 +120,15 @@ The application will be available at:
 ## 📸 Sample Output
 
 ### Web Interface
-![Premium Web Interface](./Sample_screenshots/1.png)
+![Premium Web Interface](./Sample_screenshots/1.png)<br>
 *Premium glass morphism design with Bengali question input and AI-powered answer display*
 
 ### Question Answer Input and Output Interface
-![অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে?](./Sample_screenshots/2.png)
+![অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে?](./Sample_screenshots/2.png)<br>
 *Large question input field with Answer field and Related chunks file*
 
 ### Described button Interface
-![Bengali Describe the context](./Sample_screenshots/3.png)
+![Bengali Describe the context](./Sample_screenshots/3.png)<br>
 *When clicked on the describe button users can see the following details about the model, evaluation, matched keywords etc*
 
 ## কে আসর জমাইতে অদ্বিতীয়?
