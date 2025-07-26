@@ -219,7 +219,8 @@ GET /api/status
 | **Confidence Score** | 0.0 - 1.0 | Overall system confidence in the answer | 40% | Weighted combination of all sub-metrics |
 | **Keyword Match Ratio** | 0.0 - 1.0 | Proportion of query keywords found in retrieved chunks | 30% | Enhanced Bengali stemming + exact matching |
 | **Semantic Similarity** | 0.0 - 1.0 | Cosine similarity between query and answer embeddings | 20% | SentenceTransformer embeddings |
-| **TF-IDF Relevance** | 0.0 - 1.0 | Statistical relevance using term frequency | 10% | scikit-learn TF-IDF vectorization |
+| **TF-IDF Relevance** | 0.0 - 1.0 | Statistical relevance using term frequency | 10% | scikit-learn TF-IDF vectorization | 
+<br>
 
 ### 2. **Secondary Metrics**
 
@@ -230,7 +231,8 @@ GET /api/status
 | **Context Relevance** | 0.0 - 1.0 | Relevance of retrieved document chunks | Retrieval quality |
 | **Response Time** | milliseconds | Time taken to generate complete response | Performance monitoring |
 
-
+<br>
+<br>
 
 ## 🛠️ Technical Implementation
 
@@ -250,7 +252,7 @@ GET /api/status
 | **⚙️ Environment** | python-dotenv | 1.0+ | Environment Variables | Secure API key management |
 | **✅ Data Validation** | Pydantic | 2.4+ | Request/Response Models | Type validation, automatic documentation |
 | **🌍 Language** | Python | 3.8+ | Core Programming | Excellent AI/ML ecosystem, readable syntax |
-
+<br>
 
 ### 📚 Additional Libraries & Tools
 
@@ -262,7 +264,7 @@ GET /api/status
 | **🐳 Containerization** | Docker (Future) | Deployment and scalability |
 | **☁️ Cloud Deployment** | AWS/GCP (Future) | Production hosting |
 
-
+<br><br>
 ## Architecture Overview
 
 ```
