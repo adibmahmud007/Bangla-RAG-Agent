@@ -2,6 +2,7 @@ import re
 
 chunk_path = 'data/chunks_2line.txt'
 
+
 def find_chunks_by_query(query):
     with open(chunk_path, 'r', encoding='utf-8') as f:
         text = f.read()
