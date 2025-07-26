@@ -208,6 +208,25 @@ GET /api/status
 #### Answer
 ![](./Sample_screenshots/Answer.png)
 
+## 📈 Evaluation Metrics
+
+### 1. **Primary Metrics**
+
+| Metric | Range | Description | Weight | Implementation |
+|--------|-------|-------------|--------|----------------|
+| **Confidence Score** | 0.0 - 1.0 | Overall system confidence in the answer | 40% | Weighted combination of all sub-metrics |
+| **Keyword Match Ratio** | 0.0 - 1.0 | Proportion of query keywords found in retrieved chunks | 30% | Enhanced Bengali stemming + exact matching |
+| **Semantic Similarity** | 0.0 - 1.0 | Cosine similarity between query and answer embeddings | 20% | SentenceTransformer embeddings |
+| **TF-IDF Relevance** | 0.0 - 1.0 | Statistical relevance using term frequency | 10% | scikit-learn TF-IDF vectorization |
+
+### 2. **Secondary Metrics**
+
+| Metric | Range | Description | Purpose |
+|--------|-------|-------------|---------|
+| **Answer Length Score** | 0.0 - 1.0 | Optimal answer length assessment | Quality control |
+| **Language Consistency** | 0.0 - 1.0 | Language match between query and answer | Multilingual accuracy |
+| **Context Relevance** | 0.0 - 1.0 | Relevance of retrieved document chunks | Retrieval quality |
+| **Response Time** | milliseconds | Time taken to generate complete response | Performance monitoring |
 
 ## 🛠️ Technical Implementation
 
