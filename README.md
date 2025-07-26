@@ -129,25 +129,21 @@ The application will be available at:
 
 ### Described button Interface
 ![Bengali Describe the context](./Sample_screenshots/3.png)
-*When clicked on the describe button users can see the following details about mthe odel, evaluation, matched keywords etc*
+*When clicked on the describe button users can see the following details about the model, evaluation, matched keywords etc*
 
-### কে আসর জমাইতে অদ্বিতীয়?
-## উত্তরঃ হরিশ 
+## কে আসর জমাইতে অদ্বিতীয়?
+### উত্তরঃ হরিশ 
 ![Answer Display](./Sample_screenshots/4.png)
 
 
-### কার বয়স চল্লিশ এর এপার ওপার?
-## উত্তরঃ শম্ভুনাথবাবুর
+## কার বয়স চল্লিশ এর এপার ওপার?
+### উত্তরঃ শম্ভুনাথবাবুর
 ![](./Sample_screenshots/5.png)
 
 
-### ভাগ্যদেব্তার প্রধান এজেন্ট কে?
-## উত্তরঃ মামা
+## ভাগ্যদেব্তার প্রধান এজেন্ট কে?
+### উত্তরঃ মামা
 ![](./Sample_screenshots/6.png)
-
-### Complete Question-Answer Flow
-![Complete QA Flow](./Sample_screenshots/7.png)
-*Full workflow demonstration from question input to answer generation with side panel analytics*
 
 
 ### Question-Answer Examples
@@ -167,18 +163,18 @@ POST /api/search
 Content-Type: application/json
 
 {
-  "query": "আপনার প্রশ্ন এখানে লিখুন"
+  "query": "মেয়ের বয়স পনের শুনে কার মন ভার হলো?"
 }
 ```
 
 **Response:**
 ```json
 {
-  "answer": "AI-generated answer",
+  "answer": "মামার",
   "confidence": 0.85,
-  "keyword_matches": 3.5,
-  "semantic_score": 0.78,
-  "matching_keywords": ["keyword1", "keyword2"],
+  "keyword_matches": 4.0,
+  "semantic_score":0.766,
+  "matching_keywords": ["মেয়ের", "বয়স", "মন", "ভার"],
   "full_chunk": "Complete context used for answer",
   "model": "llama-3.3-70b-versatile",
   "success": true
@@ -201,82 +197,65 @@ GET /api/status
 ```
 
 #### 3. Interactive Documentation
-- **Swagger UI**: Available at `/docs` with interactive testing
+- **Swagger UI**: Available at `http://localhost:8000/docs#/` with interactive testing
 - **ReDoc**: Available at `/redoc` with detailed documentation
 - **OpenAPI Schema**: Available at `/openapi.json`
 
 ## 🛠️ Technical Implementation
+## 🛠️ Technology Stack
+
+| Category | Technology | Version | Purpose | Why Used |
+|----------|------------|---------|---------|----------|
+| **🌐 Backend Framework** | FastAPI | 0.104+ | Web API Framework | Modern, fast, auto-documentation, async support |
+| **🚀 ASGI Server** | Uvicorn | 0.24+ | Production Server | High-performance ASGI server for FastAPI |
+| **🧠 Language Model** | Groq API | Latest | Answer Generation | Fast, accurate LLM responses (llama-3.3-70b-versatile) |
+| **🔤 Embedding Model** | SentenceTransformers | 2.2+ | Text Embeddings | Multilingual semantic understanding |
+| **📊 Vector Database** | FAISS | 1.7+ | Similarity Search | Efficient nearest neighbor search for embeddings |
+| **👁️ OCR Engine** | Tesseract | 5.0+ | PDF Text Extraction | Bengali OCR support, open-source reliability |
+| **📄 PDF Processing** | pdf2image | 1.16+ | PDF to Image | Convert PDF pages for OCR processing |
+| **🖼️ Image Processing** | Pillow (PIL) | 10.0+ | Image Manipulation | Image preprocessing for better OCR results |
+| **🔢 Scientific Computing** | NumPy | 1.24+ | Numerical Operations | Array operations, mathematical computations |
+| **📈 Data Analysis** | Pandas | 2.0+ | Data Manipulation | DataFrame operations, data cleaning |
+| **🔍 Text Analysis** | scikit-learn | 1.3+ | TF-IDF, Cosine Similarity | Statistical text analysis and similarity metrics |
+| **⚙️ Environment** | python-dotenv | 1.0+ | Environment Variables | Secure API key management |
+| **✅ Data Validation** | Pydantic | 2.4+ | Request/Response Models | Type validation, automatic documentation |
+| **🌍 Language** | Python | 3.8+ | Core Programming | Excellent AI/ML ecosystem, readable syntax |
+
+## 📚 Additional Libraries & Tools
+
+| Category | Technology | Purpose |
+|----------|------------|---------|
+| **🎨 Frontend** | HTML5, CSS3, JavaScript | Premium web interface with glass morphism |
+| **🔧 Development Tools** | Git, GitHub | Version control and repository hosting |
+| **📦 Package Management** | pip, venv | Python package and environment management |
+| **🐳 Containerization** | Docker (Future) | Deployment and scalability |
+| **☁️ Cloud Deployment** | AWS/GCP (Future) | Production hosting |
 
 ### Architecture Overview
 
 ```
-📁 Multilingual RAG System
-├── 🌐 FastAPI Backend
-│   ├── REST API Endpoints
-│   ├── Async Request Handling
-│   └── Auto-generated Documentation
-├── 🧠 AI Processing Pipeline
-│   ├── Text Extraction (Tesseract OCR)
-│   ├── Multilingual Embeddings
-│   ├── Vector Search (FAISS)
-│   └── Answer Generation (Groq API)
-├── 🎨 Premium Web Interface
-│   ├── Glass Morphism Design
-│   ├── Responsive Layout
-│   └── Real-time Analytics
-└── 📊 Evaluation System
-    ├── Confidence Scoring
-    ├── Keyword Matching
-    └── Semantic Similarity
+MULTILINGUAL_RAG/
+├── __pycache__/                 # Python cache files
+├── app/                         # Main application directory
+│   ├── __pycache__/            # App cache files
+│   ├── chunk_text.py           # Text chunking functionality
+│   ├── clean_text.py           # Text cleaning utilities
+│   ├── embed_chunks.py         # Embedding generation
+│   ├── extract_pdf_text.py     # PDF text extraction
+│   ├── rag_model.py            # Main RAG model implementation
+│   ├── search_qa.py            # Search and QA functionality
+│   └── vector_store.pkl        # Pre-trained vector embeddings
+├── data/                       # Data directory
+│   └── hsc26_bangla1.pdf      # Sample Bengali PDF document
+├── Sample_screenshots/         # UI screenshots for documentation              
+├── venv/                       # Virtual environment (ignored in git)
+├── .env                        # Environment variables (API keys)
+├── .gitignore                  # Git ignore configuration
+├── main.py                     # FastAPI server and web interface
+├── README.md                   # Project documentation
+└── requirements.txt            # Python dependencies
 ```
 
-### Key Features Implemented
-
-1. **📄 PDF Processing**
-   - OCR text extraction using Tesseract
-   - Support for scanned Bengali documents
-   - Intelligent text cleaning and preprocessing
-
-2. **🧠 AI-Powered Search & Answers**
-   - Vector embeddings using SentenceTransformers
-   - Fast similarity search with FAISS
-   - Context-aware answer generation using Groq API
-   - Multiple search strategies for better accuracy
-
-3. **🌍 Multilingual Support**
-   - Automatic language detection (Bengali/English)
-   - Cross-lingual search capabilities
-   - Optimized for Bengali literature
-
-4. **🔧 Advanced Features**
-   - Enhanced chunking with metadata extraction
-   - Name and number detection in text
-   - System evaluation with similarity metrics
-   - Comprehensive error handling and logging
-   - Real-time health monitoring
-
-### Tools, Libraries & Packages Used
-
-#### Core Framework
-- **FastAPI**: Modern, fast web framework for building APIs
-- **Uvicorn**: ASGI server for FastAPI applications
-- **Pydantic**: Data validation using Python type annotations
-
-#### AI/ML Stack
-- **Sentence Transformers**: Multilingual embedding generation
-- **FAISS**: Efficient similarity search and clustering
-- **Groq API**: Large language model for answer generation
-- **scikit-learn**: Machine learning utilities and TF-IDF vectorization
-
-#### Text Processing
-- **Tesseract OCR**: Optical character recognition for PDFs
-- **pdf2image**: PDF to image conversion
-- **Pillow (PIL)**: Image processing library
-
-#### Development Tools
-- **python-dotenv**: Environment variable management
-- **NumPy**: Numerical computing
-- **Pandas**: Data manipulation and analysis
 
 ## ❓ Technical Q&A
 
