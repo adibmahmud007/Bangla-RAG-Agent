@@ -199,7 +199,7 @@ GET /api/status
 ## 3. Interactive Documentation
 - **Swagger UI**: Available at `http://localhost:8000/docs#/` with interactive testing
 ### SwaggerUI Samples
-####Swagger Home
+#### Swagger Home
 ![](./Sample_screenshots/swagger_home.png)
 #### Question
 ![](./Sample_screenshots/question.png)
