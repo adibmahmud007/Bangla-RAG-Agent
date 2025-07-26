@@ -475,12 +475,10 @@ def smart_chunking(self, text):
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
-
-For questions or issues:
-- 📧 Email: [your-email@example.com]
-- 🐛 Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/multilingual-rag-system/issues)
-- 📖 Documentation: [Project Wiki](https://github.com/YOUR_USERNAME/multilingual-rag-system/wiki)
+## Authos
+### Adib Mahmud
+- Email: [adibmahmud308@gmail.com]
+- Contact: +8801834475079
 
 ---
 
