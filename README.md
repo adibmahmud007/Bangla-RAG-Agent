@@ -120,7 +120,35 @@ The application will be available at:
 ## 📸 Sample Output
 
 ### Web Interface
-*[Add screenshot of the premium web interface showing the question input and answer display]*
+![Premium Web Interface](./Sample_screenshots/1.png)
+*Premium glass morphism design with Bengali question input and AI-powered answer display*
+
+### Question Answer Input and Output Interface
+![অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে?](./Sample_screenshots/2.png)
+*Large question input field with Answer field and Related chunks file*
+
+### Described button Interface
+![Bengali Describe the context](./Sample_screenshots/3.png)
+*When clicked on the describe button users can see the following details about mthe odel, evaluation, matched keywords etc*
+
+### কে আসর জমাইতে অদ্বিতীয়?
+## উত্তরঃ হরিশ 
+![Answer Display](./Sample_screenshots/4.png)
+
+
+### কার বয়স চল্লিশ এর এপার ওপার?
+## উত্তরঃ শম্ভুনাথবাবুর
+![](./Sample_screenshots/5.png)
+
+
+### ভাগ্যদেব্তার প্রধান এজেন্ট কে?
+## উত্তরঃ মামা
+![](./Sample_screenshots/6.png)
+
+### Complete Question-Answer Flow
+![Complete QA Flow](./Sample_screenshots/7.png)
+*Full workflow demonstration from question input to answer generation with side panel analytics*
+
 
 ### Question-Answer Examples
 
