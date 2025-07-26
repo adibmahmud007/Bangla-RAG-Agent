@@ -296,9 +296,8 @@ MULTILINGUAL_RAG/
 
 ## ❓ Technical Q&A
 
-### Text Extraction Method
 
-**Q: What method or library did you use to extract the text, and why? Did you face any formatting challenges with the PDF content?**
+### Q1: What method or library did you use to extract the text, and why? Did you face any formatting challenges with the PDF content?**
 
 **A:** I used **Tesseract OCR with pdf2image** for text extraction. This combination was chosen because:
 
@@ -324,9 +323,8 @@ def clean_text(self, text):
     return text.strip()
 ```
 
-### Chunking Strategy
 
-**Q: What chunking strategy did you choose? Why do you think it works well for semantic retrieval?**
+### Q2: What chunking strategy did you choose? Why do you think it works well for semantic retrieval?**
 
 **A:** I implemented a **hybrid chunking strategy** combining:
 
@@ -356,9 +354,8 @@ def intelligent_chunking(self, text, max_chunk_size=800):
     return chunks
 ```
 
-### Embedding Model Choice
 
-**Q: What embedding model did you use? Why did you choose it? How does it capture meaning?**
+### Q3: What embedding model did you use? Why did you choose it? How does it capture meaning?**
 
 **A:** I used **`paraphrase-multilingual-MiniLM-L12-v2`** because:
 
@@ -379,9 +376,9 @@ embedding_model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
 embeddings = embedding_model.encode(chunks)
 ```
 
-### Similarity Comparison Method
 
-**Q: How are you comparing the query with stored chunks? Why did you choose this similarity method?**
+
+### Q4: How are you comparing the query with stored chunks? Why did you choose this similarity method?**
 
 **A:** I implemented a **multi-layered similarity approach**:
 
@@ -406,9 +403,9 @@ combined_score = (
 - **TF-IDF**: Handles statistical term importance
 - **Weighted combination**: Balances different similarity aspects
 
-### Meaningful Query-Document Comparison
 
-**Q: How do you ensure meaningful comparison? What happens with vague queries?**
+
+### Q5: How do you ensure meaningful comparison? What happens with vague queries?**
 
 **A:** **Ensuring Meaningful Comparison:**
 
@@ -435,9 +432,9 @@ def handle_vague_query(self, query, chunks):
 - **Multiple result ranking**: Show confidence scores to user
 - **Clarification prompts**: Suggest more specific queries
 
-### Result Relevance and Improvements
 
-**Q: Do the results seem relevant? What might improve them?**
+
+### Q6: Do the results seem relevant? What might improve them?**
 
 **A:** **Current Relevance Assessment:**
 
