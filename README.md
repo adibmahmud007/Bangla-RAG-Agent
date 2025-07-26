@@ -27,7 +27,7 @@ Before setting up the project, ensure you have the following installed:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/multilingual-rag-system.git
+git clone https://github.com/adibmahmud007/Bangla-RAG-Agent.git
 cd multilingual-rag-system
 ```
 
@@ -98,17 +98,17 @@ GROQ_MODEL=llama-3.3-70b-versatile
 
 1. Place your PDF documents in the `data/` directory
 2. The system currently includes `hsc26_bangla1.pdf` as sample data
-3. Run the embedding generation (if needed):
+3. Run the rag model :
 
 ```bash
-python app/embed_chunks.py
+python app/rag_model.py
 ```
 
 ### Step 7: Run the Application
 
 ```bash
 # Start the FastAPI server
-python main.py
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 The application will be available at:
@@ -126,14 +126,8 @@ The application will be available at:
 
 #### Bengali Query Example:
 **প্রশ্ন:** "অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে?"
-**উত্তর:** [AI-generated answer based on document context]
+**উত্তর:** শুম্ভুনাথ
 
-#### English Query Example:
-**Question:** "What are the main characteristics mentioned in the text?"
-**Answer:** [AI-generated answer with proper context]
-
-### Analytics Panel
-*[Add screenshot of the side panel showing confidence scores, keyword matches, and semantic similarity]*
 
 ## 📚 API Documentation
 
