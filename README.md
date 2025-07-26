@@ -6,6 +6,9 @@ A sophisticated **Retrieval-Augmented Generation (RAG) system** that can intelli
 
 This project implements a complete end-to-end RAG pipeline that can:
 - **Extract and process text** from PDF documents (including scanned Bengali documents)
+- **Pre processed the text** from the extracted text.
+- **Chunked the preprocessed text** for better understand for embedding
+- **Stored the chunks** to the vector database
 - **Generate multilingual embeddings** for semantic search
 - **Answer complex questions** using AI with proper context retrieval
 - **Provide a modern web interface** with premium UI/UX design
