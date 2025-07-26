@@ -6,6 +6,9 @@ A sophisticated **Retrieval-Augmented Generation (RAG) system** that can intelli
 
 This project implements a complete end-to-end RAG pipeline that can:
 - **Extract and process text** from PDF documents (including scanned Bengali documents)
+- **Pre processed the text** from the extracted text.
+- **Chunked the preprocessed text** for better understand for embedding
+- **Stored the chunks** to the vector database
 - **Generate multilingual embeddings** for semantic search
 - **Answer complex questions** using AI with proper context retrieval
 - **Provide a modern web interface** with premium UI/UX design
@@ -119,39 +122,41 @@ The application will be available at:
 
 ## 📸 Sample Output
 
-### Web Interface
+### 1. Web Interface
 ![Premium Web Interface](./Sample_screenshots/1.png)<br>
 *Premium glass morphism design with Bengali question input and AI-powered answer display*
 
-### Question Answer Input and Output Interface
+### 2. Question Answer Input and Output Interface
 ![অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে?](./Sample_screenshots/2.png)<br>
 *Large question input field with Answer field and Related chunks file*
 
-### Described button Interface
+### 3. Described button Interface
 ![Bengali Describe the context](./Sample_screenshots/3.png)<br>
 *When clicked on the describe button users can see the following details about the model, evaluation, matched keywords etc*
 
-## কে আসর জমাইতে অদ্বিতীয়?
-### উত্তরঃ হরিশ 
+### 4. কে আসর জমাইতে অদ্বিতীয়?
+#### উত্তরঃ হরিশ 
 ![Answer Display](./Sample_screenshots/4.png)
 
 
-## কার বয়স চল্লিশ এর এপার ওপার?
-### উত্তরঃ শম্ভুনাথবাবুর
+### 5. কার বয়স চল্লিশ এর এপার ওপার?
+#### উত্তরঃ শম্ভুনাথবাবুর
 ![](./Sample_screenshots/5.png)
 
 
-## ভাগ্যদেব্তার প্রধান এজেন্ট কে?
-### উত্তরঃ মামা
+### 6. ভাগ্যদেব্তার প্রধান এজেন্ট কে?
+#### উত্তরঃ মামা
 ![](./Sample_screenshots/6.png)
 
 
-### Question-Answer Examples
+### 7. Question-Answer Examples
 
 #### Bengali Query Example:
 **প্রশ্ন:** "অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে?"
 **উত্তর:** শুম্ভুনাথ
 
+**প্রশ্ন:** "ভাগ্যদেব্তার প্রধান এজেন্ট কে?"
+**উত্তর:** মামা
 
 ## 📚 API Documentation
 
@@ -196,10 +201,10 @@ GET /api/status
 }
 ```
 
-## 3. Interactive Documentation
+##  Interactive Documentation
 - **Swagger UI**: Available at `http://localhost:8000/docs#/` with interactive testing
 ### SwaggerUI Samples
-####Swagger Home
+#### Swagger Home
 ![](./Sample_screenshots/swagger_home.png)
 #### Question
 ![](./Sample_screenshots/question.png)
@@ -207,8 +212,32 @@ GET /api/status
 ![](./Sample_screenshots/Answer.png)
 
 
+
+## 📈 Evaluation Metrics
+
+### 1. **Primary Metrics**
+
+| Metric | Range | Description | Weight | Implementation |
+|--------|-------|-------------|--------|----------------|
+| **Confidence Score** | 0.0 - 1.0 | Overall system confidence in the answer | 40% | Weighted combination of all sub-metrics |
+| **Keyword Match Ratio** | 0.0 - 1.0 | Proportion of query keywords found in retrieved chunks | 30% | Enhanced Bengali stemming + exact matching |
+| **Semantic Similarity** | 0.0 - 1.0 | Cosine similarity between query and answer embeddings | 20% | SentenceTransformer embeddings |
+| **TF-IDF Relevance** | 0.0 - 1.0 | Statistical relevance using term frequency | 10% | scikit-learn TF-IDF vectorization | 
+<br>
+
+### 2. **Secondary Metrics**
+
+| Metric | Range | Description | Purpose |
+|--------|-------|-------------|---------|
+| **Answer Length Score** | 0.0 - 1.0 | Optimal answer length assessment | Quality control |
+| **Language Consistency** | 0.0 - 1.0 | Language match between query and answer | Multilingual accuracy |
+| **Context Relevance** | 0.0 - 1.0 | Relevance of retrieved document chunks | Retrieval quality |
+| **Response Time** | milliseconds | Time taken to generate complete response | Performance monitoring |
+
+<br>
+<br>
+
 ## 🛠️ Technical Implementation
-## 🛠️ Technology Stack
 
 | Category | Technology | Version | Purpose | Why Used |
 |----------|------------|---------|---------|----------|
@@ -226,8 +255,9 @@ GET /api/status
 | **⚙️ Environment** | python-dotenv | 1.0+ | Environment Variables | Secure API key management |
 | **✅ Data Validation** | Pydantic | 2.4+ | Request/Response Models | Type validation, automatic documentation |
 | **🌍 Language** | Python | 3.8+ | Core Programming | Excellent AI/ML ecosystem, readable syntax |
+<br>
 
-## 📚 Additional Libraries & Tools
+### 📚 Additional Libraries & Tools
 
 | Category | Technology | Purpose |
 |----------|------------|---------|
@@ -237,7 +267,8 @@ GET /api/status
 | **🐳 Containerization** | Docker (Future) | Deployment and scalability |
 | **☁️ Cloud Deployment** | AWS/GCP (Future) | Production hosting |
 
-### Architecture Overview
+<br><br>
+## Architecture Overview
 
 ```
 MULTILINGUAL_RAG/
@@ -475,12 +506,10 @@ def smart_chunking(self, text):
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
-
-For questions or issues:
-- 📧 Email: [your-email@example.com]
-- 🐛 Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/multilingual-rag-system/issues)
-- 📖 Documentation: [Project Wiki](https://github.com/YOUR_USERNAME/multilingual-rag-system/wiki)
+## Authos
+### Adib Mahmud
+- Email: [adibmahmud308@gmail.com]
+- Contact: +8801834475079
 
 ---
 
