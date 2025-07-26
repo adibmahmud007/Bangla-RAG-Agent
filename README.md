@@ -119,34 +119,34 @@ The application will be available at:
 
 ## 📸 Sample Output
 
-### Web Interface
+### 1. Web Interface
 ![Premium Web Interface](./Sample_screenshots/1.png)<br>
 *Premium glass morphism design with Bengali question input and AI-powered answer display*
 
-### Question Answer Input and Output Interface
+### 2. Question Answer Input and Output Interface
 ![অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে?](./Sample_screenshots/2.png)<br>
 *Large question input field with Answer field and Related chunks file*
 
-### Described button Interface
+### 3. Described button Interface
 ![Bengali Describe the context](./Sample_screenshots/3.png)<br>
 *When clicked on the describe button users can see the following details about the model, evaluation, matched keywords etc*
 
-## কে আসর জমাইতে অদ্বিতীয়?
-### উত্তরঃ হরিশ 
+### 4. কে আসর জমাইতে অদ্বিতীয়?
+#### উত্তরঃ হরিশ 
 ![Answer Display](./Sample_screenshots/4.png)
 
 
-### কার বয়স চল্লিশ এর এপার ওপার?
+### 5. কার বয়স চল্লিশ এর এপার ওপার?
 #### উত্তরঃ শম্ভুনাথবাবুর
 ![](./Sample_screenshots/5.png)
 
 
-### ভাগ্যদেব্তার প্রধান এজেন্ট কে?
+### 6. ভাগ্যদেব্তার প্রধান এজেন্ট কে?
 #### উত্তরঃ মামা
 ![](./Sample_screenshots/6.png)
 
 
-### Question-Answer Examples
+### 7. Question-Answer Examples
 
 #### Bengali Query Example:
 **প্রশ্ন:** "অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে?"
@@ -208,6 +208,8 @@ GET /api/status
 #### Answer
 ![](./Sample_screenshots/Answer.png)
 
+
+
 ## 📈 Evaluation Metrics
 
 ### 1. **Primary Metrics**
@@ -228,6 +230,8 @@ GET /api/status
 | **Context Relevance** | 0.0 - 1.0 | Relevance of retrieved document chunks | Retrieval quality |
 | **Response Time** | milliseconds | Time taken to generate complete response | Performance monitoring |
 
+
+
 ## 🛠️ Technical Implementation
 
 | Category | Technology | Version | Purpose | Why Used |
@@ -247,6 +251,7 @@ GET /api/status
 | **✅ Data Validation** | Pydantic | 2.4+ | Request/Response Models | Type validation, automatic documentation |
 | **🌍 Language** | Python | 3.8+ | Core Programming | Excellent AI/ML ecosystem, readable syntax |
 
+
 ### 📚 Additional Libraries & Tools
 
 | Category | Technology | Purpose |
@@ -257,7 +262,8 @@ GET /api/status
 | **🐳 Containerization** | Docker (Future) | Deployment and scalability |
 | **☁️ Cloud Deployment** | AWS/GCP (Future) | Production hosting |
 
-### Architecture Overview
+
+## Architecture Overview
 
 ```
 MULTILINGUAL_RAG/
